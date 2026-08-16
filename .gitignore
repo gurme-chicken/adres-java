@@ -1,0 +1,11 @@
+# Ignore Gradle project-specific cache directory
+.gradle
+
+# Ignore Gradle build output directory
+build
+
+# Log kayıtları
+*.log
+
+# PTT API ham cache verisi (SQL dump'tan yeniden üretilebilir)
+data/cache/

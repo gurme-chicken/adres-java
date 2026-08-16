@@ -1,0 +1,32 @@
+plugins {
+    id 'application'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation libs.junit.jupiter
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    implementation libs.gson
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+application {
+    mainClass = 'adres.database.App'
+}
+
+// run'ı kök dizinden çalıştır, yoksa data klösörünü bulamıyor
+tasks.named('run') {
+    workingDir = rootProject.projectDir
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}

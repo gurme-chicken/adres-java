@@ -1,0 +1,7 @@
+[versions]
+junit-jupiter = "5.12.1"
+gson = "2.13.1"
+
+[libraries]
+junit-jupiter = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junit-jupiter" }
+gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
